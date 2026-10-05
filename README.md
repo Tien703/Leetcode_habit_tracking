@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🚀 AlgoHabit - Universal Coding Habit Tracker
 
 Nền tảng Fullstack Web App kết hợp Browser Extension giúp theo dõi, duy trì thói quen giải thuật toán (LeetCode, Codeforces,...) cho cá nhân và cộng đồng.
@@ -88,6 +87,4 @@ Mở trình duyệt truy cập: `http://localhost:3000`
 3. Bấm **"Load unpacked"** (Tải tiện ích đã giải nén) và chọn thư mục `extension/` trong dự án.
 4. Bấm vào icon ngọn lửa 🔥 của Extension trên trình duyệt, dán API Key từ Web App và bấm **"Lưu Cấu Hình"**.
 5. Bây giờ mỗi khi bạn giải xong bài trên LeetCode hoặc Codeforces, hệ thống sẽ tự động cập nhật streak và gửi thông báo!
-=======
 # Leetcode_habit_tracking
->>>>>>> main
