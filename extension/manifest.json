@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "AlgoHabit - Universal Coding Habit Tracker",
+  "version": "1.0.0",
+  "description": "Tự động ghi nhận bài giải thành công trên LeetCode, Codeforces và đồng bộ Streak lên AlgoHabit Web App.",
+  "permissions": [
+    "storage",
+    "notifications",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://leetcode.com/*",
+    "*://*.leetcode.com/*",
+    "*://codeforces.com/*",
+    "*://*.codeforces.com/*",
+    "http://localhost:3000/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "AlgoHabit Tracker"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://leetcode.com/problems/*",
+        "*://leetcode.com/submissions/*"
+      ],
+      "js": ["content_scripts/leetcode_adapter.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "*://codeforces.com/problemset/problem/*",
+        "*://codeforces.com/contest/*/problem/*",
+        "*://codeforces.com/submissions/*"
+      ],
+      "js": ["content_scripts/codeforces_adapter.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

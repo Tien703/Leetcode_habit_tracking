@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoHabit Extension</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="logo-title">
+      <span class="fire-icon">🔥</span>
+      <div>
+        <h1 class="title">AlgoHabit</h1>
+        <p class="subtitle">Universal Habit Tracker</p>
+      </div>
+    </div>
+    <span class="status-pill active" id="statusPill">Đang hoạt động</span>
+  </div>
+
+  <div class="streak-card">
+    <div class="streak-badge">
+      <span class="streak-count" id="streakDisplay">12</span>
+      <span class="streak-label">Ngày Streak</span>
+    </div>
+    <div class="streak-info">
+      <div class="info-row">
+        <span>Hôm nay:</span>
+        <strong id="todayStatus" class="text-green">✓ Đã giải 2 bài</strong>
+      </div>
+      <div class="info-row">
+        <span>Level:</span>
+        <strong id="levelDisplay">Level 6 (Gold Solver)</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Cấu hình kết nối Web App</div>
+  
+  <div class="form-group">
+    <label for="serverUrl">Web App API URL:</label>
+    <input type="text" id="serverUrl" placeholder="http://localhost:3000" />
+  </div>
+
+  <div class="form-group">
+    <label for="apiKey">Personal API Key:</label>
+    <input type="password" id="apiKey" placeholder="Dán API Key từ trang cá nhân..." />
+  </div>
+
+  <div class="button-row">
+    <button id="saveBtn" class="btn btn-primary">Lưu Cấu Hình</button>
+    <button id="testBtn" class="btn btn-secondary">Test Gửi</button>
+  </div>
+
+  <div id="statusMsg" class="status-msg"></div>
+
+  <div class="supported-platforms">
+    <span class="plat-tag leetcode">LeetCode ✓</span>
+    <span class="plat-tag codeforces">Codeforces ✓</span>
+    <span class="plat-tag hackerrank">HackerRank (Soon)</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
